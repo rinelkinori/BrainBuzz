@@ -1,0 +1,190 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <meta name="description" content="Quiz topics covered by BrainBuzz: HTML Fundamentals, Tags and Elements, and Forms and User Inputs.">
+  <title>Quiz Topics | BrainBuzz</title>
+  <link rel="icon" href="images/logo.svg" type="image/svg+xml">
+  <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/css/bootstrap.min.css">
+  <link rel="stylesheet" href="css/style.css">
+</head>
+<body>
+
+  <header class="site-header sticky-top">
+    <nav class="navbar navbar-expand-md navbar-dark" aria-label="Main navigation">
+      <div class="container">
+        <a class="navbar-brand brand" href="index.html">
+          <img src="images/logo.svg" alt="BrainBuzz logo">
+          Brain<span>Buzz</span>
+        </a>
+        <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#mainNav" aria-controls="mainNav" aria-expanded="false" aria-label="Toggle navigation">
+          <span class="navbar-toggler-icon"></span>
+        </button>
+        <div class="collapse navbar-collapse" id="mainNav">
+          <ul class="navbar-nav ms-auto">
+          <li class="nav-item"><a class="nav-link" href="index.html">Home</a></li>
+          <li class="nav-item"><a class="nav-link active" href="topics.html" aria-current="page">Topics</a></li>
+          <li class="nav-item"><a class="nav-link" href="about.html">About</a></li>
+          <li class="nav-item"><a class="nav-link" href="contact.html">Contact</a></li>
+          </ul>
+        </div>
+      </div>
+    </nav>
+  </header>
+
+  <div class="page-banner">
+    <div class="container">
+      <h1>Quiz Topics</h1>
+      <p>Everything you can review in BrainBuzz, based on CIT16233Z lessons.</p>
+    </div>
+  </div>
+
+  <main>
+
+    <section class="section">
+      <div class="container">
+        <h2 class="section-title">Topics at a Glance</h2>
+        <p class="section-subtitle">Each topic has 10 multiple-choice questions with instant feedback.</p>
+
+        <div class="table-wrap">
+          <table class="table table-striped table-hover align-middle">
+            <caption>Summary of quiz topics</caption>
+            <thead>
+              <tr>
+                <th scope="col">Topic</th>
+                <th scope="col">Questions</th>
+                <th scope="col">Time per Question</th>
+                <th scope="col">Main Focus</th>
+              </tr>
+            </thead>
+            <tbody>
+              <tr>
+                <td>HTML Fundamentals</td>
+                <td>10</td>
+                <td>20 seconds</td>
+                <td>Definitions, history, DOCTYPE, Internet vs. Web</td>
+              </tr>
+              <tr>
+                <td>Tags &amp; Elements</td>
+                <td>10</td>
+                <td>20 seconds</td>
+                <td>Document structure tags, headings, links, images, viewport</td>
+              </tr>
+              <tr>
+                <td>Forms &amp; User Inputs</td>
+                <td>10</td>
+                <td>20 seconds</td>
+                <td>Input types, textarea, select, submit</td>
+              </tr>
+            </tbody>
+          </table>
+        </div>
+      </div>
+    </section>
+
+    <section class="section section-alt">
+      <div class="container">
+        <h2 class="section-title">What Each Quiz Covers</h2>
+        <div class="row g-4 justify-content-center">
+
+          <div class="col-md-6 col-lg-4">
+          <article class="card h-100">
+            <img class="card-icon" src="images/icon-fundamentals.svg" alt="">
+            <h3>HTML Fundamentals Quiz</h3>
+            <ul>
+              <li>What HTML stands for (HyperText Markup Language)</li>
+              <li>The meaning of "HyperText" and "Markup"</li>
+              <li>Proposed by Tim Berners-Lee in 1989 and developed in 1990 at CERN</li>
+              <li>The purpose of the <code>&lt;!DOCTYPE html&gt;</code> declaration</li>
+              <li>The difference between the Internet and the World Wide Web</li>
+            </ul>
+            <a href="index.html#topics" class="btn btn-secondary">Play This Quiz</a>
+          </article>
+          </div>
+
+          <div class="col-md-6 col-lg-4">
+          <article class="card h-100">
+            <img class="card-icon" src="images/icon-tags.svg" alt="">
+            <h3>Tags &amp; Elements Quiz</h3>
+            <ul>
+              <li>The purpose of <code>&lt;html&gt;</code>, <code>&lt;head&gt;</code>, <code>&lt;title&gt;</code>, and <code>&lt;body&gt;</code></li>
+              <li>Headings <code>&lt;h1&gt;</code> to <code>&lt;h6&gt;</code>, <code>&lt;p&gt;</code>, and <code>&lt;br&gt;</code></li>
+              <li>Links with <code>&lt;a&gt;</code> and images with <code>&lt;img&gt;</code></li>
+              <li>The difference between a tag and a complete element</li>
+              <li>The viewport meta tag</li>
+            </ul>
+            <a href="index.html#topics" class="btn btn-secondary">Play This Quiz</a>
+          </article>
+          </div>
+
+          <div class="col-md-6 col-lg-4">
+          <article class="card h-100">
+            <img class="card-icon" src="images/icon-forms.svg" alt="">
+            <h3>Forms &amp; User Inputs Quiz</h3>
+            <ul>
+              <li>Text field and password field</li>
+              <li>Radio button (select one) and checkbox (select many)</li>
+              <li>Textarea for longer text</li>
+              <li>Drop-down list using <code>&lt;select&gt;</code></li>
+              <li>The submit button</li>
+            </ul>
+            <a href="index.html#topics" class="btn btn-secondary">Play This Quiz</a>
+          </article>
+          </div>
+
+        </div>
+      </div>
+    </section>
+
+    <section class="section">
+      <div class="container">
+        <h2 class="section-title">Quick Reference: Basic HTML Structure</h2>
+        <p class="section-subtitle">The document structure you will be asked about in the quizzes.</p>
+        <pre><code>&lt;!DOCTYPE html&gt;
+&lt;html lang="en"&gt;
+  &lt;head&gt;
+    &lt;meta charset="UTF-8"&gt;
+    &lt;meta name="viewport" content="width=device-width, initial-scale=1.0"&gt;
+    &lt;title&gt;My Page&lt;/title&gt;
+  &lt;/head&gt;
+  &lt;body&gt;
+    &lt;h1&gt;Hello, world!&lt;/h1&gt;
+  &lt;/body&gt;
+&lt;/html&gt;</code></pre>
+      </div>
+    </section>
+
+  </main>
+
+  <footer class="site-footer">
+    <div class="container">
+      <div class="footer-grid">
+        <div>
+          <h3>BrainBuzz</h3>
+          <p>Spark Your Knowledge, Play &amp; Learn.<br>A CIT16233Z project by Group Aish Shibal.</p>
+        </div>
+        <div>
+          <h3>Quick Links</h3>
+          <ul>
+            <li><a href="index.html">Home</a></li>
+            <li><a href="topics.html">Topics</a></li>
+            <li><a href="about.html">About</a></li>
+            <li><a href="contact.html">Contact</a></li>
+          </ul>
+        </div>
+        <div>
+          <h3>Learn More</h3>
+          <ul>
+            <li><a href="https://developer.mozilla.org/en-US/docs/Learn/HTML" target="_blank" rel="noopener">MDN: Learn HTML</a></li>
+            <li><a href="https://www.w3schools.com/html/" target="_blank" rel="noopener">W3Schools HTML</a></li>
+          </ul>
+        </div>
+      </div>
+      <p class="footer-bottom">&copy; 2026 BrainBuzz | Group Aish Shibal | Project Category: Games and Entertainment</p>
+    </div>
+  </footer>
+
+  <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/js/bootstrap.bundle.min.js"></script>
+</body>
+</html>

@@ -1,0 +1,246 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <meta name="description" content="About BrainBuzz: project rationale, features, technical requirements, challenges, team, and references.">
+  <title>About | BrainBuzz</title>
+  <link rel="icon" href="images/logo.svg" type="image/svg+xml">
+  <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/css/bootstrap.min.css">
+  <link rel="stylesheet" href="css/style.css">
+</head>
+<body>
+
+  <header class="site-header sticky-top">
+    <nav class="navbar navbar-expand-md navbar-dark" aria-label="Main navigation">
+      <div class="container">
+        <a class="navbar-brand brand" href="index.html">
+          <img src="images/logo.svg" alt="BrainBuzz logo">
+          Brain<span>Buzz</span>
+        </a>
+        <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#mainNav" aria-controls="mainNav" aria-expanded="false" aria-label="Toggle navigation">
+          <span class="navbar-toggler-icon"></span>
+        </button>
+        <div class="collapse navbar-collapse" id="mainNav">
+          <ul class="navbar-nav ms-auto">
+          <li class="nav-item"><a class="nav-link" href="index.html">Home</a></li>
+          <li class="nav-item"><a class="nav-link" href="topics.html">Topics</a></li>
+          <li class="nav-item"><a class="nav-link active" href="about.html" aria-current="page">About</a></li>
+          <li class="nav-item"><a class="nav-link" href="contact.html">Contact</a></li>
+          </ul>
+        </div>
+      </div>
+    </nav>
+  </header>
+
+  <div class="page-banner">
+    <div class="container">
+      <h1>About BrainBuzz</h1>
+      <p>A small web-based quiz game that makes reviewing HTML active and fun.</p>
+    </div>
+  </div>
+
+  <main>
+
+    <!-- Rationale -->
+    <section id="rationale" class="section">
+      <div class="container">
+        <h2 class="section-title">Project Rationale</h2>
+        <div class="two-col">
+          <div>
+            <p>Filipino internet users aged 16 to 64 spend an average of 8 hours and 52 minutes online daily, the highest among 17 surveyed countries and well above the global average of 6 hours and 38 minutes (DataReportal, 2025). For IT students, much of this time goes to passive browsing instead of productive learning, even though HTML is the foundation of web development and a core skill in the degree program.</p>
+            <p>Many students struggle with HTML basics such as definitions, tag purposes, and form elements because they rely on reading notes without enough interactive practice. Without active review, they may memorize definitions briefly but not understand how and when to use each element.</p>
+          </div>
+          <div>
+            <p>BrainBuzz is a small web-based quiz game that helps 2nd-year IT students review HTML lessons from CIT16233Z. It focuses on three topics, gives instant feedback, and runs in any web browser for free.</p>
+            <blockquote>Game-based learning improves student engagement, retention, and critical thinking compared to passive study (Mao et al., 2022). Retrieving information through quizzes strengthens memory more than rereading (Past&ouml;tter &amp; B&auml;uml, 2014).</blockquote>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <!-- Features -->
+    <section id="features" class="section section-alt">
+      <div class="container">
+        <h2 class="section-title">Project Features</h2>
+        <p class="section-subtitle">Users pick a topic, answer 10 multiple-choice questions against a countdown timer, and see their score and best score at the end.</p>
+        <div class="two-col">
+          <div>
+            <h3>Game and Progress Features</h3>
+            <ul class="feature-list">
+              <li><strong>Timer and scoring:</strong> a countdown timer, a running score, and instant right or wrong feedback after each answer.</li>
+              <li><strong>Best score per topic:</strong> saved automatically in browser LocalStorage and shown on the topic cards.</li>
+              <li><strong>Clear Scores:</strong> one button resets all saved scores.</li>
+              <li><strong>Retry:</strong> any quiz can be retaken as many times as needed.</li>
+              <li><strong>Responsive design:</strong> works on phones, tablets, and computers.</li>
+            </ul>
+          </div>
+          <div>
+            <h3>Screens</h3>
+            <table class="table table-striped table-hover align-middle">
+              <thead>
+                <tr><th scope="col">Screen</th><th scope="col">What it shows</th></tr>
+              </thead>
+              <tbody>
+                <tr><td>Home</td><td>Flex grid of topic cards with best scores and a Clear Scores button.</td></tr>
+                <tr><td>Quiz</td><td>Question, answer options, timer, and current score.</td></tr>
+                <tr><td>Results</td><td>Final score, best score, Retry, and Back to Home.</td></tr>
+              </tbody>
+            </table>
+            <p><a href="index.html" class="btn btn-primary">Try the Game</a></p>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <!-- Technical requirements -->
+    <section id="technical" class="section">
+      <div class="container">
+        <h2 class="section-title">Technical Requirements</h2>
+        <div class="table-wrap">
+          <table class="table table-striped table-hover align-middle">
+            <caption>Components used to build BrainBuzz</caption>
+            <thead>
+              <tr><th scope="col">Component</th><th scope="col">Description</th></tr>
+            </thead>
+            <tbody>
+              <tr>
+                <td>Hardware</td>
+                <td>Standard personal computer or laptop with at least 4 GB RAM, keyboard, mouse, and internet connection, used for designing, coding, testing, and running the website.</td>
+              </tr>
+              <tr>
+                <td>Software</td>
+                <td>Visual Studio Code is used exclusively for writing and editing the HTML, CSS, and JavaScript files. Google Chrome or Mozilla Firefox is used for testing.</td>
+              </tr>
+              <tr>
+                <td>HTML5</td>
+                <td>Creates the page structure: quiz questions, buttons, game sections, score displays, and all visible content.</td>
+              </tr>
+              <tr>
+                <td>CSS3</td>
+                <td>Handles styling, colors, layout, animations, and responsive design using the viewport principle taught in class.</td>
+              </tr>
+              <tr>
+                <td>JavaScript</td>
+                <td>Powers interactivity: loading quizzes, checking answers, calculating scores, running timers, and saving progress.</td>
+              </tr>
+              <tr>
+                <td>Storage</td>
+                <td>Browser LocalStorage API saves scores on the user's device. No database, server, or backend code is required.</td>
+              </tr>
+              <tr>
+                <td>Project Files</td>
+                <td><code>index.html</code>, <code>style.css</code>, <code>script.js</code>, and <code>questions.js</code> (the question data for all topics).</td>
+              </tr>
+            </tbody>
+          </table>
+        </div>
+      </div>
+    </section>
+
+    <!-- Challenges -->
+    <section id="challenges" class="section section-alt">
+      <div class="container">
+        <h2 class="section-title">Anticipated Challenges</h2>
+        <details open>
+          <summary>Content Accuracy &amp; Alignment</summary>
+          <p>Ensuring all definitions, tag purposes, and concepts match exactly what is taught in the course materials, so the tool serves as a valid study aid aligned with exam coverage.</p>
+        </details>
+        <details>
+          <summary>Consistent Cross-Browser Behavior</summary>
+          <p>Making sure JavaScript, LocalStorage, and the responsive layout work identically across Chrome, Firefox, and Edge, since web page display varies across browsers.</p>
+        </details>
+        <details>
+          <summary>Balanced Difficulty Levels</summary>
+          <p>Designing questions that are accessible to beginners early in the semester while still being useful as students advance into topics such as linking pages, website structure, and forms.</p>
+        </details>
+      </div>
+    </section>
+
+    <!-- Team -->
+    <section id="team" class="section">
+      <div class="container">
+        <h2 class="section-title">Meet Group Aish Shibal</h2>
+        <p class="section-subtitle">CIT16233Z project team</p>
+        <div class="row g-4 justify-content-center">
+          <div class="col-6 col-lg-3">
+          <article class="card h-100 member-card">
+            <img src="images/member.svg" alt="Avatar for Ryana Aira S. Castro">
+            <h3>Ryana Aira S. Castro</h3>
+            <p>Group Member</p>
+          </article>
+          </div>
+          <div class="col-6 col-lg-3">
+          <article class="card h-100 member-card">
+            <img src="images/member.svg" alt="Avatar for Rhienelle R. Dulaca">
+            <h3>Rhienelle R. Dulaca</h3>
+            <p>Group Member</p>
+          </article>
+          </div>
+          <div class="col-6 col-lg-3">
+          <article class="card h-100 member-card">
+            <img src="images/member.svg" alt="Avatar for Dhames Aleck Gabuya">
+            <h3>Dhames Aleck Gabuya</h3>
+            <p>Group Member</p>
+          </article>
+          </div>
+          <div class="col-6 col-lg-3">
+          <article class="card h-100 member-card">
+            <img src="images/member.svg" alt="Avatar for Jan Nino Jesus T. Melendres">
+            <h3>Jan Nino Jesus T. Melendres</h3>
+            <p>Group Member</p>
+          </article>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <!-- References -->
+    <section id="references" class="section section-alt">
+      <div class="container">
+        <h2 class="section-title">References</h2>
+        <ol class="references">
+          <li>Fissler, P., K&uuml;ster, O. C., Laptinskaya, D., Loy, L. S., von Arnim, C. A. F., &amp; Kolassa, I.-T. (2018). Jigsaw puzzling taps multiple cognitive abilities and is a potential protective factor for cognitive aging. <em>Frontiers in Aging Neuroscience, 10</em>, Article 299. <a href="https://doi.org/10.3389/fnagi.2018.00299" target="_blank" rel="noopener">https://doi.org/10.3389/fnagi.2018.00299</a></li>
+          <li>Giray, L., Neme&ntilde;o, J., Braganza, J., Lucero, S. M., &amp; Bacarra, R. (2024). A survey on digital device engagement, digital stress, and coping strategies among college students in the Philippines. <em>International Journal of Adolescence and Youth, 29</em>(1). <a href="https://doi.org/10.1080/02673843.2024.2371413" target="_blank" rel="noopener">https://doi.org/10.1080/02673843.2024.2371413</a></li>
+          <li>Mao, W., Cui, Y., Chiu, M. M., &amp; Lei, H. (2022). Effects of game-based learning on students' critical thinking: A meta-analysis. <em>Review of Educational Research</em>. <a href="https://doi.org/10.1177/07356331211007098" target="_blank" rel="noopener">https://doi.org/10.1177/07356331211007098</a></li>
+          <li>Digital 2025: The Philippines. (2025, February 25). <em>DataReportal &ndash; Global Digital Insights</em>. <a href="https://datareportal.com/reports/digital-2025-philippines" target="_blank" rel="noopener">https://datareportal.com/reports/digital-2025-philippines</a></li>
+          <li>Past&ouml;tter, B., &amp; B&auml;uml, K.-H. T. (2014). Retrieval practice enhances new learning: The forward effect of testing. <em>Frontiers in Psychology, 5</em>, Article 286. <a href="https://doi.org/10.3389/fpsyg.2014.00286" target="_blank" rel="noopener">https://doi.org/10.3389/fpsyg.2014.00286</a></li>
+        </ol>
+      </div>
+    </section>
+
+  </main>
+
+  <footer class="site-footer">
+    <div class="container">
+      <div class="footer-grid">
+        <div>
+          <h3>BrainBuzz</h3>
+          <p>Spark Your Knowledge, Play &amp; Learn.<br>A CIT16233Z project by Group Aish Shibal.</p>
+        </div>
+        <div>
+          <h3>Quick Links</h3>
+          <ul>
+            <li><a href="index.html">Home</a></li>
+            <li><a href="topics.html">Topics</a></li>
+            <li><a href="about.html">About</a></li>
+            <li><a href="contact.html">Contact</a></li>
+          </ul>
+        </div>
+        <div>
+          <h3>On This Page</h3>
+          <ul>
+            <li><a href="#rationale">Rationale</a></li>
+            <li><a href="#features">Features</a></li>
+            <li><a href="#technical">Technical Requirements</a></li>
+            <li><a href="#references">References</a></li>
+          </ul>
+        </div>
+      </div>
+      <p class="footer-bottom">&copy; 2026 BrainBuzz | Group Aish Shibal | Project Category: Games and Entertainment</p>
+    </div>
+  </footer>
+
+  <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/js/bootstrap.bundle.min.js"></script>
+</body>
+</html>

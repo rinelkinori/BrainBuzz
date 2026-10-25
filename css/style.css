@@ -1,0 +1,355 @@
+/* =========================================================
+   BrainBuzz - style.css  (Bootstrap 5 version)
+   Group: Aish Shibal | CIT16233Z
+   Bootstrap handles the reset, grid, navbar, tables and forms.
+   This file adds the BrainBuzz theme and custom components.
+   ========================================================= */
+
+/* ---------- 1. Design tokens ---------- */
+:root {
+  --purple-900: #2b1b5a;
+  --purple-700: #4b2fa8;
+  --purple-500: #6c4ce0;
+  --yellow-400: #ffc933;
+  --yellow-500: #f5b400;
+  --green-500: #22a06b;
+  --red-500: #e5484d;
+  --bg: #f6f4ff;
+  --surface: #ffffff;
+  --text: #241f3a;
+  --muted: #6b6685;
+  --border: #ddd8f2;
+  --radius: 14px;
+  --shadow: 0 6px 18px rgba(43, 27, 90, 0.12);
+  --shadow-hover: 0 12px 28px rgba(43, 27, 90, 0.22);
+  --bs-body-color: var(--text);
+  --bs-body-bg: var(--bg);
+  --bs-link-color: var(--purple-500);
+  --bs-link-hover-color: var(--purple-700);
+}
+
+/* ---------- 2. Typography ---------- */
+body {
+  font-family: "Segoe UI", Roboto, "Helvetica Neue", Arial, sans-serif;
+  line-height: 1.65;
+}
+
+h1, h2, h3, h4 {
+  font-family: "Trebuchet MS", "Segoe UI", sans-serif;
+  color: var(--purple-900);
+}
+h1 { font-size: 2.6rem; }
+h2 { font-size: 1.8rem; }
+h3 { font-size: 1.25rem; }
+
+code {
+  background-color: #ece8ff;
+  color: var(--purple-700);
+  padding: 2px 6px;
+  border-radius: 5px;
+}
+
+/* ---------- 3. Sections ---------- */
+.section { padding: 3rem 0; }
+.section-alt {
+  background-color: var(--surface);
+  border-top: 1px solid var(--border);
+  border-bottom: 1px solid var(--border);
+}
+.section-title { text-align: center; margin-bottom: 0.4rem; }
+.section-subtitle {
+  text-align: center;
+  color: var(--muted);
+  max-width: 640px;
+  margin: 0 auto 2rem;
+}
+
+/* ---------- 4. Navbar (Bootstrap navbar + theme) ---------- */
+.site-header {
+  background: linear-gradient(90deg, var(--purple-900), var(--purple-700));
+  z-index: 1030;
+  box-shadow: 0 3px 10px rgba(0, 0, 0, 0.25);
+  --bs-navbar-color: #e9e4ff;
+  --bs-navbar-hover-color: #ffffff;
+  --bs-navbar-active-color: var(--purple-900);
+}
+
+.brand {
+  display: flex;
+  align-items: center;
+  gap: 0.6rem;
+  color: #fff;
+  font-size: 1.5rem;
+  font-weight: 800;
+}
+.brand:hover { color: #fff; }
+.brand img { width: 40px; height: 40px; }
+.brand span { color: var(--yellow-400); }
+
+.site-header .nav-link {
+  border-radius: 999px;
+  padding: 0.5rem 1rem;
+  font-weight: 600;
+  transition: background-color 0.25s, color 0.25s;
+}
+.site-header .nav-link:hover { background-color: rgba(255, 255, 255, 0.15); }
+.site-header .nav-link.active { background-color: var(--yellow-400); color: var(--purple-900); }
+
+/* ---------- 5. Hero & banner ---------- */
+.hero {
+  background: radial-gradient(circle at 80% 20%, var(--purple-500), var(--purple-900) 70%);
+  color: #fff;
+  padding: 4rem 0;
+}
+.hero-inner { display: flex; align-items: center; justify-content: space-between; gap: 2rem; }
+.hero-text { flex: 1; }
+.hero h1 { color: #fff; margin-bottom: 0.8rem; }
+.hero h1 span { color: var(--yellow-400); }
+.hero p { font-size: 1.15rem; color: #e4defa; max-width: 520px; }
+.hero-image { flex: 0 0 280px; }
+
+.hero-stats { display: flex; gap: 1.5rem; margin: 1.5rem 0; list-style: none; padding: 0; }
+.hero-stats li {
+  background-color: rgba(255, 255, 255, 0.12);
+  border: 1px solid rgba(255, 255, 255, 0.25);
+  border-radius: var(--radius);
+  padding: 0.6rem 1.1rem;
+  text-align: center;
+}
+.hero-stats strong { display: block; font-size: 1.5rem; color: var(--yellow-400); }
+
+.page-banner {
+  background: linear-gradient(90deg, var(--purple-900), var(--purple-500));
+  color: #fff;
+  padding: 2.5rem 0;
+  text-align: center;
+}
+.page-banner h1 { color: #fff; font-size: 2.2rem; }
+.page-banner p { color: #e4defa; margin: 0.4rem 0 0; }
+
+/* ---------- 6. Buttons (Bootstrap .btn + theme colors) ---------- */
+.btn {
+  font-weight: 700;
+  padding: 0.7rem 1.5rem;
+  border-radius: 999px;
+  transition: transform 0.2s, background-color 0.25s, box-shadow 0.25s;
+}
+.btn:hover { transform: translateY(-3px); box-shadow: var(--shadow-hover); }
+
+.btn-primary {
+  --bs-btn-color: var(--purple-900);
+  --bs-btn-bg: var(--yellow-400);
+  --bs-btn-border-color: var(--yellow-400);
+  --bs-btn-hover-color: var(--purple-900);
+  --bs-btn-hover-bg: var(--yellow-500);
+  --bs-btn-hover-border-color: var(--yellow-500);
+  --bs-btn-active-color: var(--purple-900);
+  --bs-btn-active-bg: var(--yellow-500);
+  --bs-btn-active-border-color: var(--yellow-500);
+}
+.btn-secondary {
+  --bs-btn-color: #fff;
+  --bs-btn-bg: var(--purple-500);
+  --bs-btn-border-color: var(--purple-500);
+  --bs-btn-hover-color: #fff;
+  --bs-btn-hover-bg: var(--purple-700);
+  --bs-btn-hover-border-color: var(--purple-700);
+  --bs-btn-active-color: #fff;
+  --bs-btn-active-bg: var(--purple-700);
+  --bs-btn-active-border-color: var(--purple-700);
+}
+.btn-outline {
+  --bs-btn-color: var(--purple-500);
+  --bs-btn-bg: transparent;
+  --bs-btn-border-color: var(--purple-500);
+  --bs-btn-hover-color: #fff;
+  --bs-btn-hover-bg: var(--purple-500);
+  --bs-btn-hover-border-color: var(--purple-500);
+  --bs-btn-active-color: #fff;
+  --bs-btn-active-bg: var(--purple-700);
+  --bs-btn-active-border-color: var(--purple-700);
+}
+.btn-danger {
+  --bs-btn-color: var(--red-500);
+  --bs-btn-bg: transparent;
+  --bs-btn-border-color: var(--red-500);
+  --bs-btn-hover-color: #fff;
+  --bs-btn-hover-bg: var(--red-500);
+  --bs-btn-hover-border-color: var(--red-500);
+  --bs-btn-active-color: #fff;
+  --bs-btn-active-bg: var(--red-500);
+  --bs-btn-active-border-color: var(--red-500);
+}
+
+/* ---------- 7. Cards (Bootstrap .card + theme) ---------- */
+.card {
+  background-color: var(--surface);
+  border: 1px solid var(--border);
+  border-radius: var(--radius);
+  box-shadow: var(--shadow);
+  padding: 1.6rem;
+  transition: transform 0.25s, box-shadow 0.25s;
+}
+.card:hover { transform: translateY(-6px); box-shadow: var(--shadow-hover); }
+.card .card-icon { width: 64px; height: 64px; margin-bottom: 1rem; }
+.card p { color: var(--muted); flex-grow: 1; }
+.card .btn { align-self: flex-start; }
+.best-score {
+  background-color: #f1edff;
+  border-left: 5px solid var(--yellow-400);
+  padding: 0.5rem 0.8rem;
+  border-radius: 6px;
+  margin-bottom: 1rem;
+  font-weight: 700;
+  color: var(--purple-700);
+}
+.member-card { text-align: center; align-items: center; }
+.member-card img { width: 90px; height: 90px; border-radius: 50%; margin-bottom: 0.8rem; }
+.member-card p { flex-grow: 0; }
+
+/* ---------- 8. Quiz game screens ---------- */
+.screen { display: none; }
+.screen.active { display: block; }
+
+.quiz-box, .result-box {
+  background-color: var(--surface);
+  border: 1px solid var(--border);
+  border-radius: var(--radius);
+  box-shadow: var(--shadow);
+  padding: 2rem;
+  max-width: 760px;
+  margin: 0 auto;
+}
+.quiz-top { display: flex; justify-content: space-between; align-items: center; flex-wrap: wrap; gap: 0.6rem; margin-bottom: 1rem; }
+
+.badge { border-radius: 999px; padding: 0.4rem 0.9rem; font-size: 0.9rem; background-color: var(--purple-500); color: #fff; }
+.badge-yellow { background-color: var(--yellow-400); color: var(--purple-900); }
+.badge-timer.danger { background-color: var(--red-500); color: #fff; }
+
+.progress { height: 12px; background-color: #ebe7fb; border-radius: 999px; margin-bottom: 0.4rem; }
+.progress-bar { width: 0; background: linear-gradient(90deg, var(--purple-500), var(--yellow-400)); transition: width 0.4s; }
+
+.timer-track { width: 100%; height: 8px; background-color: #ebe7fb; border-radius: 999px; overflow: hidden; margin-bottom: 1.5rem; }
+.timer-bar { height: 100%; width: 100%; background-color: var(--green-500); transition: width 1s linear, background-color 0.3s; }
+.timer-bar.danger { background-color: var(--red-500); }
+
+.question-text { font-size: 1.35rem; margin-bottom: 1.2rem; }
+.options { display: flex; flex-direction: column; gap: 0.8rem; }
+.option-btn {
+  text-align: left;
+  font-family: inherit;
+  font-size: 1rem;
+  color: var(--text);
+  background-color: #faf9ff;
+  border: 2px solid var(--border);
+  border-radius: 12px;
+  padding: 0.85rem 1.1rem;
+  cursor: pointer;
+  transition: border-color 0.2s, background-color 0.2s, transform 0.15s;
+}
+.option-btn:hover:not(:disabled) { border-color: var(--purple-500); background-color: #efeaff; transform: translateX(5px); }
+.option-btn:disabled { cursor: default; }
+.option-btn.correct { background-color: #dff6ea; border-color: var(--green-500); }
+.option-btn.wrong { background-color: #fde4e5; border-color: var(--red-500); }
+
+.feedback { min-height: 3.2rem; margin-top: 1.2rem; padding: 0.7rem 1rem; border-radius: 10px; font-weight: 600; display: none; }
+.feedback.show { display: block; }
+.feedback.good { background-color: #dff6ea; color: #14633f; }
+.feedback.bad { background-color: #fde4e5; color: #9b2227; }
+.quiz-actions { display: flex; justify-content: space-between; align-items: center; margin-top: 1.2rem; }
+
+.result-box { text-align: center; }
+.result-score { font-size: 4rem; font-weight: 800; color: var(--purple-500); line-height: 1.1; }
+.result-message { font-size: 1.2rem; margin: 0.6rem 0 1.2rem; }
+.result-stats { display: flex; justify-content: center; gap: 1rem; flex-wrap: wrap; margin-bottom: 1.5rem; }
+.result-stats div { background-color: #f1edff; border-radius: var(--radius); padding: 0.7rem 1.4rem; }
+.result-stats strong { display: block; font-size: 1.4rem; color: var(--purple-700); }
+.result-buttons { display: flex; justify-content: center; gap: 1rem; flex-wrap: wrap; }
+.home-actions { display: flex; justify-content: center; margin-top: 2rem; }
+
+/* ---------- 9. Tables (Bootstrap .table + theme) ---------- */
+table {
+  --bs-table-striped-bg: #faf9ff;
+  --bs-table-hover-bg: #efeaff;
+  background-color: var(--surface);
+  border-radius: var(--radius);
+  overflow: hidden;
+  box-shadow: var(--shadow);
+}
+caption { caption-side: top; text-align: left; font-weight: 700; color: var(--purple-900); font-size: 1.1rem; }
+thead th { background-color: var(--purple-700) !important; color: #fff !important; }
+
+/* ---------- 10. Content blocks ---------- */
+.two-col { display: flex; flex-wrap: wrap; gap: 2rem; align-items: flex-start; }
+.two-col > * { flex: 1 1 320px; }
+
+.callout { background-color: #fff8de; border-left: 6px solid var(--yellow-400); border-radius: 8px; padding: 1rem 1.2rem; margin: 1rem 0; }
+blockquote { border-left: 5px solid var(--purple-500); background-color: #f1edff; padding: 1rem 1.2rem; border-radius: 8px; font-style: italic; }
+
+.feature-list { list-style: none; padding: 0; }
+.feature-list li {
+  background-color: var(--surface);
+  border: 1px solid var(--border);
+  border-radius: 10px;
+  padding: 0.8rem 1rem 0.8rem 3rem;
+  position: relative;
+  margin-bottom: 0.7rem;
+}
+.feature-list li::before {
+  content: "\2713";
+  position: absolute;
+  left: 1rem;
+  top: 0.75rem;
+  width: 1.5rem;
+  height: 1.5rem;
+  line-height: 1.5rem;
+  text-align: center;
+  background-color: var(--yellow-400);
+  color: var(--purple-900);
+  border-radius: 50%;
+  font-weight: 800;
+}
+
+details { background-color: var(--surface); border: 1px solid var(--border); border-radius: 10px; padding: 0.8rem 1rem; margin-bottom: 0.7rem; }
+summary { cursor: pointer; font-weight: 700; color: var(--purple-700); }
+details p { margin: 0.6rem 0 0; }
+.references li { margin-bottom: 0.9rem; }
+
+pre { background-color: var(--purple-900); color: #e9e4ff; padding: 1.2rem 1.4rem; border-radius: var(--radius); max-width: 640px; margin: 0 auto; }
+pre code { background: none; color: inherit; padding: 0; }
+
+/* ---------- 11. Forms (Bootstrap form controls + theme) ---------- */
+.form-card {
+  background-color: var(--surface);
+  border: 1px solid var(--border);
+  border-radius: var(--radius);
+  box-shadow: var(--shadow);
+  padding: 2rem;
+  max-width: 640px;
+  margin: 0 auto;
+}
+.form-label { font-weight: 700; }
+legend.form-label { font-size: 1rem; }
+.form-control, .form-select { background-color: #faf9ff; border: 2px solid var(--border); border-radius: 10px; padding: 0.7rem 0.9rem; }
+.form-control:focus, .form-select:focus { border-color: var(--purple-500); box-shadow: 0 0 0 4px rgba(108, 76, 224, 0.18); }
+.form-check-input:checked { background-color: var(--purple-500); border-color: var(--purple-500); }
+.form-note { text-align: center; margin-top: 1rem; font-weight: 700; color: var(--green-500); }
+
+/* ---------- 12. Footer ---------- */
+.site-footer { background-color: var(--purple-900); color: #cfc7f0; padding: 2.5rem 0 1.2rem; margin-top: 2rem; }
+.footer-grid { display: flex; flex-wrap: wrap; justify-content: space-between; gap: 2rem; }
+.footer-grid > div { flex: 1 1 220px; }
+.site-footer h3 { color: var(--yellow-400); font-size: 1.1rem; }
+.site-footer ul { list-style: none; padding: 0; }
+.site-footer a { color: #cfc7f0; text-decoration: none; }
+.site-footer a:hover { color: var(--yellow-400); }
+.footer-bottom { border-top: 1px solid rgba(255, 255, 255, 0.2); margin-top: 1.5rem; padding-top: 1rem; text-align: center; font-size: 0.9rem; }
+
+/* ---------- 13. Responsive ---------- */
+@media (max-width: 760px) {
+  h1 { font-size: 2rem; }
+  .hero-inner { flex-direction: column-reverse; text-align: center; }
+  .hero-image { flex-basis: auto; width: 200px; }
+  .hero-stats { justify-content: center; flex-wrap: wrap; }
+  .quiz-box, .result-box, .form-card { padding: 1.2rem; }
+}
